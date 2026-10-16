@@ -1,100 +1,131 @@
-# ITO Masaki | 伊藤 昌樹
+# 伊藤 昌樹 | ITO Masaki
 
-Research & Development Engineer interested in **world models, reinforcement learning, and robotics**.
+**世界モデル・強化学習・ロボティクス**を軸に、機械学習の研究とシステム開発に取り組んでいます。大学院では世界モデルを用いたロボットの物体把持を研究し、現在は制御・ロボット学習・3D点群処理へと対象を広げています。
 
-My background connects graduate research in robot learning, hands-on experience with service robots, software engineering in the maritime industry, and current research into learning-based control and 3D perception.
+## 経歴
 
-## Education & Career
+| 年 | 所属・経歴 |
+| :--- | :--- |
+| 2018年 | 立命館大学 入学 |
+| 2022年 | 立命館大学大学院 情報理工学研究科 入学 |
+| 2024年 | 株式会社ウェザーニューズ 入社 |
+| 2026年 | 株式会社中央エンジニアリング 入社 |
 
-| Stage | Institution / Company | Research & Experience |
-| --- | --- | --- |
-| Graduate studies | **Ritsumeikan University — Graduate School of Information Science and Engineering**<br>立命館大学大学院 情報理工学研究科・人間情報科学コース | Master's studies; world models and robotic object grasping. |
-| After graduate school | **Weathernews Inc.**<br>株式会社ウェザーニューズ | Software engineering in the maritime business; operational tools and workflow automation. |
-| Current | **Chuo Engineering Co., Ltd.**<br>株式会社中央エンジニアリング | Research and development involving AI, simulation-based control, robotics, and point-cloud processing. |
+## 大学・大学院での研究と活動
 
-## Graduate Research — World Models for Robotic Grasping
+### 大学院：世界モデルを用いたロボットの物体把持
 
-At Ritsumeikan University, I researched **robotic object grasping using world models and generative models**. My interest was in how a robot can learn useful representations of its environment and use those representations for control with limited data.
+立命館大学大学院 情報理工学研究科では、**世界モデルとロボットによる物体把持**を研究しました。観測から環境の表現を学習し、その表現をロボットの制御につなげることで、少ないデータから行動を学習する手法に関心を持って取り組みました。
 
-- Investigated the connection between learned world representations and physical interaction.
-- Worked on learning-based approaches to robotic grasping.
-- A paper from this research was accepted at **SII — the IEEE/SICE International Symposium on System Integration**.
+- 生成モデルによる環境・状態の表現学習
+- 学習した表現を用いたロボット制御と物体把持
+- 国際会議 **SII（IEEE/SICE International Symposium on System Integration）**での論文採択
 
-My broader exploration of generative models and visual control also includes a public [**NewtonianVAE implementation**](https://github.com/ItoMasaki/NewtonianVAE), with tools for data collection, training, and evaluating latent representations for control.
+#### 関連リポジトリ：NewtonianVAE
 
-## RoboCup — Service Robot Development
+[**NewtonianVAE**](https://github.com/ItoMasaki/NewtonianVAE) は、物理的な構造を持つ潜在表現を学習し、画像からの制御につなげる手法の実装です。データ収集・モデル学習に加え、潜在表現の相関や制御への利用を確認するスクリプトを公開しています。
 
-I participated in **RoboCup**, working on a domestic service robot using the **Toyota Human Support Robot (HSR)**.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ItoMasaki/NewtonianVAE/main/docs/NewtonianVAE_srcnn_anime_noise1.gif" alt="NewtonianVAEリポジトリに掲載している制御実験のアニメーション" width="560">
+</p>
 
-This experience connected robot-learning research with the practical challenges of building a robot system that interacts with its surroundings.
+<p align="center"><sub>NewtonianVAEの公開実装に掲載している制御実験</sub></p>
 
-| Item | Experience |
-| --- | --- |
-| Platform | Toyota Human Support Robot (HSR) |
-| Application | Domestic service robotics |
-| Result | Runner-up finish with the team |
+<details>
+<summary>潜在表現の評価画像</summary>
 
-## Weathernews — Maritime Software & Operational Automation
+![NewtonianVAEの潜在表現の相関評価](https://raw.githubusercontent.com/ItoMasaki/NewtonianVAE/main/docs/correlation.png)
 
-At **Weathernews**, I worked in the maritime business as a software engineer, developing and improving internal systems used in daily operations.
+</details>
 
-- Developed and improved operational tools for maritime services.
-- Worked on workflow automation and reducing repetitive manual tasks.
-- Gained experience translating operational requirements into software used in day-to-day work.
+### RoboCup：家庭支援ロボットの開発
 
-Alongside this work, I continued studying and implementing machine-learning methods, particularly world models and reinforcement learning.
+**Toyota Human Support Robot（HSR）**を用いた家庭支援ロボットの開発に取り組み、RoboCupではチームで**準優勝**を経験しました。ロボットを実際に動かす中で、研究手法だけでなく、システムとして動作させるための実装・統合・検証の重要性を学びました。
 
-## Current Research & Development
+| 項目 | 内容 |
+| :--- | :--- |
+| 活動 | RoboCupへの参加・家庭支援ロボットの開発 |
+| ロボット | Toyota Human Support Robot（HSR） |
+| 成績 | チームで準優勝 |
 
-At **Chuo Engineering**, my current work and research interests span learning-based control, robot learning, and 3D perception. The following sections summarize ongoing directions at a high level.
+#### 関連リポジトリ：ROS2Docker
 
-### Reinforcement Learning & Simulation-Based Control
+[**ROS2Docker**](https://github.com/ItoMasaki/ROS2Docker) では、Dockerを用いたROS2開発環境を公開しています。ロボティクスの共同研究・開発において、環境の再現性を確保し、開発環境を共有しやすくするための基盤です。
 
-I investigate how agents learn control policies in simulation and how to improve training stability and evaluation.
+## ウェザーニューズでの取り組み
 
-- Continuous control with **PPO** and recurrent policies.
-- Transferring from **behavior cloning to reinforcement learning**.
-- Simulation environments and experimental pipelines using **Python, C++, ROS2, and JSBSim**.
-- Multi-agent learning and coordination.
+2024年に**株式会社ウェザーニューズ**へ入社し、海運事業に関わる社内システムの開発・改修に取り組みました。
 
-### World Models & Robot Learning
+- 海運サービスの運用を支える業務ツールの開発・改善
+- 定型作業の自動化と、手作業を減らすための業務フローの改善
+- 現場の要望をソフトウェアの要件・実装へ落とし込む開発
 
-I am exploring how learned representations can connect perception, goals, and robot actions.
+業務と並行して、世界モデルや強化学習などの学習・実装も継続してきました。
 
-- World models and predictive representation learning.
-- Goal representations combining **images and language**.
-- Imitation learning for manipulation, including **action chunking and flow matching**.
-- The relationship between learned dynamics, planning, and control.
+## 現在の研究・開発
 
-These topics include exploratory studies and methods under investigation.
+2026年に**株式会社中央エンジニアリング**へ入社しました。現在取り組んでいる研究・開発と、継続して調査・検証しているテーマを以下にまとめています。
 
-### 3D Point-Cloud Understanding & Terrain Mapping
+### 強化学習による制御・シミュレーション
 
-I work on extracting useful terrain information from large point clouds, with a focus on forest environments.
+シミュレーション上での制御方策の学習と、学習の安定性・評価方法を検討しています。
 
-- **Open-vocabulary point-cloud segmentation** using OpenScene-style distilled features and CLIP text similarity.
-- Distinguishing ground, low vegetation, and other scene elements for terrain extraction.
-- Connecting ground extraction to **DEM/TIN construction and contour generation**.
-- Evaluating pretrained models and identifying where domain-specific data or adaptation is needed.
+- PPOや再帰型方策による連続制御
+- 行動模倣（Behavior Cloning）から強化学習への移行
+- Python・C++・ROS2・JSBSimを用いた実験環境の構築
+- マルチエージェントの学習・協調
 
-## Open-Source Research Projects
+### 世界モデル・ロボット学習
 
-| Project | Description |
-| --- | --- |
-| [**PixyzRL**](https://github.com/ItoMasaki/PixyzRL) | A reinforcement learning framework built on Pixyz, supporting PPO, A2C, SAC, and Gymnasium integration. |
-| [**NewtonianVAE**](https://github.com/ItoMasaki/NewtonianVAE) | An implementation exploring visual control through physically structured latent representations. |
-| [**ROS2Docker**](https://github.com/ItoMasaki/ROS2Docker) | A containerized ROS2 development environment for reproducible robotics research and collaboration. |
+大学院での研究を出発点に、知覚・目標・行動を学習モデルでつなぐ方法を検討しています。
 
-## Technical Background
+- 世界モデルと予測に基づく表現学習
+- 画像と言語を組み合わせた目標表現
+- ロボットアームの模倣学習
+- Action Chunking・Flow Matchingなどの行動生成手法の調査・検証
 
-| Area | Tools & Topics |
-| --- | --- |
-| Programming | Python, C++, Shell |
-| Machine Learning | PyTorch, Pixyz, reinforcement learning, world models, imitation learning |
-| Robotics & Simulation | ROS2, Gymnasium, JSBSim |
-| 3D Perception | Point-cloud segmentation, OpenScene, CLIP, terrain processing |
-| Development | Docker, Azure, training pipelines, experiment evaluation |
+### 3D点群の意味理解・地形抽出
 
-## Contact
+森林などの点群から、地形の把握や図面作成に必要な情報を取り出す処理を研究・開発しています。
 
-Explore my public work or get in touch through [**GitHub**](https://github.com/ItoMasaki).
+- OpenScene系の蒸留特徴とCLIPによる、テキストに基づく点群分類
+- 地表面・低草・樹木などの識別と地表面の抽出
+- 地表面抽出からTIN・DEM・等高線生成までの処理
+- 公開済みモデルの評価と、対象環境に適応させるための課題整理
+
+## 継続的な研究実装・オープンソース
+
+### PixyzRL：確率的生成モデルに基づく強化学習フレームワーク
+
+[**PixyzRL**](https://github.com/ItoMasaki/PixyzRL) は、確率的生成モデルライブラリPixyzを基盤とする強化学習フレームワークです。モデルや損失関数を組み合わせ、強化学習の実験を組み立てやすい実装を目指しています。
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/577b9d4b-30d0-493d-95fc-b83a2f292c28" alt="PixyzRLのプロジェクトロゴ" width="360">
+</p>
+
+- PPO・A2C・SACの実装
+- Replay Buffer・Rollout Bufferなどの学習用データ管理
+- Gymnasium環境との連携
+- 学習・評価・ログ記録のためのユーティリティ
+
+### 公開リポジトリ一覧
+
+| リポジトリ | テーマ |
+| :--- | :--- |
+| [**NewtonianVAE**](https://github.com/ItoMasaki/NewtonianVAE) | 物理的な潜在表現の学習と画像に基づく制御 |
+| [**ROS2Docker**](https://github.com/ItoMasaki/ROS2Docker) | 再現性のあるROS2開発環境 |
+| [**PixyzRL**](https://github.com/ItoMasaki/PixyzRL) | 確率的生成モデルを基盤とする強化学習 |
+
+## 技術・開発環境
+
+| 分野 | 技術・ツール |
+| :--- | :--- |
+| 言語 | Python・C++・Shell |
+| 機械学習 | PyTorch・Pixyz・強化学習・世界モデル・模倣学習 |
+| ロボティクス・シミュレーション | ROS2・Gymnasium・JSBSim |
+| 3D認識 | 点群セグメンテーション・OpenScene・CLIP・地形処理 |
+| 開発基盤 | Docker・Azure・学習パイプライン・実験評価 |
+
+## 連絡先
+
+公開しているコードや活動は [GitHub / ItoMasaki](https://github.com/ItoMasaki) からご覧いただけます。
