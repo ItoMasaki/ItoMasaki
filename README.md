@@ -1,61 +1,100 @@
-# Masaki Ito | 伊藤 昌樹
+# ITO Masaki | 伊藤 昌樹
 
-Research & Development Engineer working on **reinforcement learning, world models, and robotics**.
+Research & Development Engineer interested in **world models, reinforcement learning, and robotics**.
 
-I am interested in how agents learn representations of the physical world and use them to make decisions and act. My work spans research implementations, simulation experiments, and the engineering needed to turn learning algorithms into usable systems.
+My background connects graduate research in robot learning, hands-on experience with service robots, software engineering in the maritime industry, and current research into learning-based control and 3D perception.
 
-## Research Interests
+## Education & Career
 
-- **World models and representation learning** — learning latent dynamics from observations, with an interest in physically structured representations and predictive learning.
-- **Reinforcement learning and control** — continuous control, recurrent policies, learning from demonstrations, and multi-agent learning.
-- **Robot learning** — visual goal representations, imitation learning, and language-conditioned manipulation.
-- **3D perception** — semantic understanding of point clouds and open-vocabulary methods for terrain and scene interpretation.
+| Stage | Institution / Company | Research & Experience |
+| --- | --- | --- |
+| Graduate studies | **Ritsumeikan University — Graduate School of Information Science and Engineering**<br>立命館大学大学院 情報理工学研究科・人間情報科学コース | Master's studies; world models and robotic object grasping. |
+| After graduate school | **Weathernews Inc.**<br>株式会社ウェザーニューズ | Software engineering in the maritime business; operational tools and workflow automation. |
+| Current | **Chuo Engineering Co., Ltd.**<br>株式会社中央エンジニアリング | Research and development involving AI, simulation-based control, robotics, and point-cloud processing. |
 
-## Research Journey
+## Graduate Research — World Models for Robotic Grasping
 
-### Foundations: Generative Models and Visual Control
+At Ritsumeikan University, I researched **robotic object grasping using world models and generative models**. My interest was in how a robot can learn useful representations of its environment and use those representations for control with limited data.
 
-Explored probabilistic generative models and latent representations for control, including an implementation of **NewtonianVAE**. This work connects image observations, physically structured latent spaces, and goal-directed behavior.
+- Investigated the connection between learned world representations and physical interaction.
+- Worked on learning-based approaches to robotic grasping.
+- A paper from this research was accepted at **SII — the IEEE/SICE International Symposium on System Integration**.
 
-### Reinforcement Learning Tools and Robotics Infrastructure
+My broader exploration of generative models and visual control also includes a public [**NewtonianVAE implementation**](https://github.com/ItoMasaki/NewtonianVAE), with tools for data collection, training, and evaluating latent representations for control.
 
-Developed **PixyzRL**, a reinforcement learning framework built on Pixyz, and worked on containerized **ROS2** development environments. These projects reflect my interest in making research code modular, reproducible, and easier to extend.
+## RoboCup — Service Robot Development
 
-### Applied Research and Development
+I participated in **RoboCup**, working on a domestic service robot using the **Toyota Human Support Robot (HSR)**.
 
-My experience includes robot manipulation, simulation-based learning, and software development for experimental systems. I work across model implementation, training pipelines, evaluation, and system integration.
+This experience connected robot-learning research with the practical challenges of building a robot system that interacts with its surroundings.
 
-### Current Explorations
-
-- Connecting **world models and goal representations** to robot control.
-- Studying **imitation learning**, including action chunking and flow matching, for robot manipulation.
-- Investigating **recurrent reinforcement learning** and the transition from demonstrations to policy optimization.
-- Applying **open-vocabulary 3D perception** to ground extraction and terrain mapping.
-
-These are ongoing research directions; public implementations are linked below.
-
-## Selected Public Projects
-
-| Project | Focus |
+| Item | Experience |
 | --- | --- |
-| [**PixyzRL**](https://github.com/ItoMasaki/PixyzRL) | A reinforcement learning framework built on Pixyz, with PPO, A2C, SAC, and Gymnasium integration. |
-| [**NewtonianVAE**](https://github.com/ItoMasaki/NewtonianVAE) | An implementation of NewtonianVAE, exploring visual control through physically structured latent representations. |
+| Platform | Toyota Human Support Robot (HSR) |
+| Application | Domestic service robotics |
+| Result | Runner-up finish with the team |
+
+## Weathernews — Maritime Software & Operational Automation
+
+At **Weathernews**, I worked in the maritime business as a software engineer, developing and improving internal systems used in daily operations.
+
+- Developed and improved operational tools for maritime services.
+- Worked on workflow automation and reducing repetitive manual tasks.
+- Gained experience translating operational requirements into software used in day-to-day work.
+
+Alongside this work, I continued studying and implementing machine-learning methods, particularly world models and reinforcement learning.
+
+## Current Research & Development
+
+At **Chuo Engineering**, my current work and research interests span learning-based control, robot learning, and 3D perception. The following sections summarize ongoing directions at a high level.
+
+### Reinforcement Learning & Simulation-Based Control
+
+I investigate how agents learn control policies in simulation and how to improve training stability and evaluation.
+
+- Continuous control with **PPO** and recurrent policies.
+- Transferring from **behavior cloning to reinforcement learning**.
+- Simulation environments and experimental pipelines using **Python, C++, ROS2, and JSBSim**.
+- Multi-agent learning and coordination.
+
+### World Models & Robot Learning
+
+I am exploring how learned representations can connect perception, goals, and robot actions.
+
+- World models and predictive representation learning.
+- Goal representations combining **images and language**.
+- Imitation learning for manipulation, including **action chunking and flow matching**.
+- The relationship between learned dynamics, planning, and control.
+
+These topics include exploratory studies and methods under investigation.
+
+### 3D Point-Cloud Understanding & Terrain Mapping
+
+I work on extracting useful terrain information from large point clouds, with a focus on forest environments.
+
+- **Open-vocabulary point-cloud segmentation** using OpenScene-style distilled features and CLIP text similarity.
+- Distinguishing ground, low vegetation, and other scene elements for terrain extraction.
+- Connecting ground extraction to **DEM/TIN construction and contour generation**.
+- Evaluating pretrained models and identifying where domain-specific data or adaptation is needed.
+
+## Open-Source Research Projects
+
+| Project | Description |
+| --- | --- |
+| [**PixyzRL**](https://github.com/ItoMasaki/PixyzRL) | A reinforcement learning framework built on Pixyz, supporting PPO, A2C, SAC, and Gymnasium integration. |
+| [**NewtonianVAE**](https://github.com/ItoMasaki/NewtonianVAE) | An implementation exploring visual control through physically structured latent representations. |
 | [**ROS2Docker**](https://github.com/ItoMasaki/ROS2Docker) | A containerized ROS2 development environment for reproducible robotics research and collaboration. |
 
 ## Technical Background
 
-| Area | Tools and Topics |
+| Area | Tools & Topics |
 | --- | --- |
 | Programming | Python, C++, Shell |
-| Machine Learning | PyTorch, Pixyz, reinforcement learning, probabilistic generative models |
-| Robotics and Simulation | ROS2, Gymnasium, JSBSim |
-| 3D Perception | Point-cloud segmentation, OpenScene, CLIP-based semantic matching |
-| Research Engineering | Docker, experiment pipelines, evaluation, reproducible environments |
-
-## Research Approach
-
-I enjoy reproducing methods, examining where they fail, and testing how they behave beyond their original setup. My goal is to connect representation learning, decision-making, and physical interaction through experiments that can be evaluated and improved.
+| Machine Learning | PyTorch, Pixyz, reinforcement learning, world models, imitation learning |
+| Robotics & Simulation | ROS2, Gymnasium, JSBSim |
+| 3D Perception | Point-cloud segmentation, OpenScene, CLIP, terrain processing |
+| Development | Docker, Azure, training pipelines, experiment evaluation |
 
 ## Contact
 
-Find my public work and get in touch through [GitHub](https://github.com/ItoMasaki).
+Explore my public work or get in touch through [**GitHub**](https://github.com/ItoMasaki).
